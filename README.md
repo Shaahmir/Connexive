@@ -2,9 +2,7 @@
 
 **Real-time conversations, built around WebRTC.**
 
-Connexive is a MERN stack video-conferencing app built for quick, room-based conversations. It brings live audio and video, screen sharing, in-meeting chat, and meeting history into one React experience, with Socket.IO coordinating the real-time connections between participants.
-
-The interface has its own visual identity, including a rotating 3D Enderman rendered with Three.js. Connexive is a hands-on exploration of real-time web communication, peer connections, and building a complete application across the frontend and backend.
+Connexive is a MERN stack video-conferencing app built for quick, room-based conversations. It brings live audio and video, screen sharing, in-meeting chat, and meeting history into one React experience, with Socket.IO coordinating the real-time connections between participants. The interface has its own visual identity, including a rotating 3D Enderman rendered with Three.js. Connexive is a hands-on exploration of real-time web communication, peer connections, and building a complete application across the frontend and backend.
 
 ## What it can do
 
@@ -184,4 +182,4 @@ Connexive is released under the MIT License. See [LICENSE](./LICENSE) for detail
 
 ## Interface
 
-![Connexive interface](./Interface.gif)
+![Connexive interface](./interface.webp)
