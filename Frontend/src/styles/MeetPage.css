@@ -1,0 +1,360 @@
+.out-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meet-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.meet-container > .meet-video {
+    margin: 1.2rem 0;
+}
+
+.meet-container > .meet-video > video{
+    width: 28rem;
+    border-radius: 20px;
+}
+
+.meet-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meet-btns > .before-svgs {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.meet-btns > .before-svgs > img:hover {
+    cursor: pointer;
+}
+
+.meet-btns button {
+    all: unset;
+    padding: 0.6rem 1.2rem;
+    background: linear-gradient(
+    to bottom,
+    #8352fed1 0%,
+    #240058 100%
+    );
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 8px;
+    height: 1.5rem;
+    margin: 0 0.2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.meet-btns button:nth-child(1) {
+    background: rgba(153, 0, 255, 0.078);
+    border: 1px solid #741dff5d;
+    transition: all 0.2s ease-in-out;
+}
+
+.meet-container > .meet-inp {
+    all: unset;
+    width: calc(100% - 4rem);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    flex-grow: 1;
+    border: 1px solid #3d3d3d7e;
+    border-bottom: 1px solid #4a00b25a;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.meet-container > .meet-inp:focus {
+    border: 1px solid #6868687e;
+    border-bottom: 1px solid #4a00b2;
+}
+
+.meet-head {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 0.5rem 0;
+}
+
+.meet-head > img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.4rem;
+}
+
+.meet-head > h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
+/* After Username */
+
+.conf-container {
+    height: 100vh;
+    position: relative;
+    transition: width 0.35s ease, margin-left 0.35s ease;
+}
+
+.conf-container > .svgs {
+    background-color: rgba(178, 178, 178, 0.119);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    border-radius: 50px;
+    max-height: 4rem;
+    z-index: 20;
+    user-select: none;
+}
+
+.conf-container > div > img {
+    margin: 1rem 0.5rem;
+}
+
+.conf-container > div > img:hover {
+    cursor: pointer;
+}
+
+.conf-container > .self-video > video {
+    border-radius: 12px;
+    width: 18rem;
+    cursor: move;
+    transition: all 0.2s ease-in-out;
+}
+
+.parti-cont {
+    width: 100vw;
+    overflow-y: scroll;
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.parti-cont::-webkit-scrollbar{
+    display: none;
+}
+
+.parti-cont > div > video {
+    width: 18rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+}
+
+.parti-cont > div > .video-placeholder {
+    width: 18rem;
+    height: 13.5rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.meet-placeholder, .self-meet-video {
+    width: 18rem;
+    height: 13.5rem;
+    border-radius: 10px;
+    margin: 0.5rem;
+    background: radial-gradient(circle at center, rgba(161, 123, 255, 1) 0%, rgba(22, 0, 56, 1) 100%);
+    background-size: 200% 200%;
+    animation: liquidMove 20s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.self-video {
+    width: 18rem;
+    height: 13.5rem;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 10;
+    cursor: move;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease-out;
+}
+
+.self-meet-placeholder, 
+.self-video > video {
+    width: 100%;
+    height: 100%;
+    margin: 0 ;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    background: radial-gradient(circle at center, rgba(161, 123, 255, 1) 0%, rgba(22, 0, 56, 1) 100%);
+    background-size: 200% 200%;
+    animation: liquidMove 20s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.self-meet-placeholder > img {
+    z-index: 10;
+    pointer-events: none;
+    user-select: none;
+}
+
+.chat-container {
+    color: white;
+    z-index: 2;
+    background-color: #2316351d;
+    position: fixed;
+    backdrop-filter: blur(40px);
+    padding: 1.5rem;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.039);
+    pointer-events: all;
+    transition: all 0.3s ease-in-out;
+    top: 0px;
+    height: 100%;
+    width: 20rem;
+}
+
+.chat-container > h1 {
+    padding: 0.4rem 0.6rem;
+    border-radius: 10px;
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+.conf-container-half {
+    width: calc(100% - 20rem);
+    margin-left: 20rem;
+}
+
+.conf-container-full {
+    width: 100%;
+}
+
+.chat-hide {
+    left: -20rem;
+}
+
+.chat-show {
+    left: 0;
+}
+
+.chat-container > .messages {
+    overflow-y: scroll;
+    max-height: calc(100% - 8rem);
+}
+
+.chat-container > .messages::-webkit-scrollbar {
+    width: 2px;
+}
+
+.chat-container > .messages::-webkit-scrollbar-thumb {
+    background:rgba(255, 255, 255, 0.336);
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    background-clip: padding-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.chat-container > .messages > p {
+    background-color: #23163506;
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255, 255, 255, 0.039);
+    margin-block: calc(0.5rem + 1.8rem);
+    padding-inline: 0.8rem;
+    padding-block: 0.6rem;
+    font-weight: 300;
+}
+
+.chat-container > .messages > .self-message {
+    background-color: #2e085499;
+    border-radius: 10px 10px 0px 10px;
+    text-align: right;
+    position: relative;
+}
+
+.chat-container > .messages > .self-message > span:first-child {
+    position: fixed;
+    top: -1.8rem;
+    right: 0;
+}
+
+.chat-container > .messages > .others-message {
+    background-color: #2e085423;
+    border-radius: 10px 10px 0px 10px;
+    text-align: left;
+    position: relative;
+}
+
+.chat-container > .messages > .others-message > span:first-child {
+    position: fixed;
+    top: -1.8rem;
+    left: 0.3em;
+}
+
+.chat-container > .input_box {
+    display: flex;
+    gap: 0.3rem;
+    position: fixed;
+    bottom: 1.2rem;
+}
+
+.chat-container > .input_box > input {
+    all: unset;
+    border: 3px solid rgba(255, 255, 255, 0.039);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    flex-basis: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.chat-container > .input_box > input:hover {
+    box-shadow: 8px 36px 400px -11px rgba(0,0,0,0.75);
+    background-color: rgba(36, 36, 36, 0.384);
+}
+
+.chat-container > .input_box > button {
+    all: unset;
+    padding: 0.8rem 0.8rem;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.039);
+    display: flex;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.chat-container > .input_box > button:hover {
+    background-color: rgba(36, 36, 36, 0.384);
+    color: white;
+    cursor: pointer;
+    box-shadow: 8px 36px 400px -11px rgba(90, 90, 90, 0.75);
+}
+
+@keyframes liquidMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}

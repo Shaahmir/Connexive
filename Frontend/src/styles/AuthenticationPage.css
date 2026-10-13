@@ -1,0 +1,136 @@
+.auth-container {
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.auth-wrap-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    border-radius: 30px;
+    border: 1px solid #a07bff41;
+    background-color: #a07bff09;
+    position: relative;
+}
+
+ .auth-container .auth-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 32rem; 
+    max-height: 38rem;
+    object-fit: cover;
+    border-radius: 30px;
+    pointer-events: none;
+}
+
+.auth-container .default-profile {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 50px;
+}
+
+.auth-container form{
+    padding: 11rem 2rem 5rem 2rem;
+    border-radius: 30px;
+    width: 45rem;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.auth-container h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 2rem 0.5rem 0 0.5rem;
+}
+
+.auth-container p:nth-child(3) {
+    color: rgb(219, 219, 219);
+    font-weight: 400 ;
+    margin: 0.3rem 0.5rem 1.5rem 0.5rem;
+}
+
+.auth-container form button {
+    all: unset;
+    padding: 0.8rem 1.2rem;
+    margin-right: 0.5rem;
+    font-weight: 400;
+    color: white;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.group-btns {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.auth-container form .auth-btn {
+    background: linear-gradient(
+    to bottom,
+    #8352fed1 0%,
+    #240058 100%
+    );
+    width: calc(100% - 2.5rem);
+    border-radius: 10px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.forget-pass {
+    margin: 1rem 1rem 0 0 ;
+    text-align: end;
+}
+
+.form-inp {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: black;
+    text-align: start;
+}
+
+.form-inp span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    position: relative;
+}
+
+.form-inp input {
+    all: unset;
+    padding: 1rem 1.5rem;
+    background-color: inherit;
+    border: 1px solid #a07bff41;
+    border-radius: 10px;
+    color: white;
+    margin-block: 0.4rem;
+}
+
+.auth-container form label {
+    color: rgb(208, 208, 208);
+    background-color: black;
+    border-radius: 20px;
+    position: absolute;
+    top: 22px;
+    left: 15px;
+    padding: 0 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-inp span:focus-within label,
+.form-inp span input:not(:placeholder-shown) + label {
+    color: white;
+    font-size: 0.8rem;
+    top: -2px;
+    left: 10px;
+}

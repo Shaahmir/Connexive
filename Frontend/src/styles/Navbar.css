@@ -1,0 +1,252 @@
+.nav {
+    padding: 1.3rem 4rem;
+    width: 100%;
+    background: #0000002d;
+    border-bottom: 1px solid rgb(37, 37, 37);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.nav-content {
+    max-width: 100rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0.01px;
+    width: 0.01px;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: 0px 0px 50px 45px #7e38ff;
+    animation: light-breathe 5s ease-in-out infinite;
+}
+
+.active {
+    color: white;
+    font-size: 16.5px;
+    border-bottom: 1.5px solid;
+    border-image: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        #6a00ff 50%, 
+        transparent 100%
+    ) 1;
+    transition: all 0.1s ease-in-out;
+}
+
+.nav-content ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(189, 189, 189);
+    padding-bottom: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    color: white;
+}
+
+.nav h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding-right: 5rem;
+    color: #ffffff;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.nav img {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav span {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.nav button {
+    all: unset;
+    padding: 0.7rem 1.7rem;
+    background: linear-gradient(
+    to bottom,
+    #8352fed1 0%,
+    #240058 100%
+    );
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 8px;
+    height: 1.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav button:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 40px #30145c;
+}
+
+.nav button:nth-child(2) {
+    padding: 0.67rem 1.7rem;
+    background: rgba(153, 0, 255, 0.078);
+    border: 1px solid #741dff5d;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav button:nth-child(2):hover {
+    background: rgba(153, 0, 255, 0.120);
+    box-shadow: 0px 1px 40px #270d52;
+}
+
+/* hamburger */
+
+.hamburger {
+  z-index:100;
+  display: none;
+}
+
+.dark .line {
+  stroke: whitesmoke;
+  transition: 0.2s ease;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+@keyframes light-breathe {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1); 
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    body:has(.nav-content.menu-open) {
+        overflow: hidden;
+    }
+    
+    .nav {
+        backdrop-filter: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .nav-content > ul, .nav-content > span {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 8rem;
+        transform: translateX(100%);
+        z-index: 50;
+        transition: transform 0.7s cubic-bezier(0.32, 0.72, 0, 1);
+        border-radius: 8px 0 0 8px;
+        height: 100vh;
+        width: 30rem;
+    }
+
+    .nav-content > ul {
+        flex-direction: column;
+        gap: 2rem;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.726);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .nav-content > span {
+        top: auto;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 29rem;
+        height: auto;
+    }
+
+    .nav-content.menu-open > ul, .nav-content.menu-open > span {
+        transform: translateX(0);
+    }
+
+    .nav-content > span > button {
+        padding: 0.5rem 1.2rem;
+    }
+
+    .nav button:nth-child(2) {
+        padding: 0.45rem 1.2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .nav-content > ul, .nav-content > span {
+        width: 100vw;
+    }
+
+    .nav-content > ul, .nav-content > span {
+        border-radius: 0 0 0 0;
+    }
+}

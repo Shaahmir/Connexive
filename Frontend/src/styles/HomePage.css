@@ -1,0 +1,133 @@
+.home-main-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    user-select: none;
+    padding: 5rem 0;
+    min-height: calc(100vh - 5.6rem - 2rem);
+}
+
+.home-main-container div h1 {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    margin-block-end: 1rem;
+    text-transform: capitalize;
+}
+
+.meet-code {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 40px #300e67;
+    border-radius: 20px;
+}
+
+.meet-code span {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.meet-code input {
+    all: unset;
+    padding: 0.7rem 1rem;
+    border-radius: 20px 0 0 20px;
+    flex-grow: 1;
+    border: 1px solid #240058;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.meet-code input:focus, .meet-code input:hover {
+    border: 1px solid #451a82;
+    box-shadow: 0px 4px 40px #200846;
+}
+
+.meet-code button {
+    all: unset;
+    font-size: 0.8rem;
+    color: white;
+    background: linear-gradient(
+    to bottom,
+    #7e38ff 0%,
+    #240058 100%
+    );
+    padding: 0.9rem 0.7rem;
+    border-radius: 0 20px 20px 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.meet-code button:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 40px #200846;
+}
+
+.home-main-container img {
+    height: 30rem;
+    width: 30rem;
+}
+
+.model-container {
+    position: relative;
+    animation: blob-breathe 10s ease-in-out infinite;
+}
+
+.blob {
+    position: absolute;
+    right: 1.5rem;
+    top: 2em;
+    filter: drop-shadow(0px 4px 20px #9c96f6);
+}
+
+.blob-outline {
+    position: absolute;
+    right: 2.5rem;
+    top: 1.4rem;
+}
+
+.history-div {
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #12032a28;
+    border: 1px solid #1f0b3f80;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.history-div .history-btn {
+    height: 32px;
+    width: 32px;
+}
+
+.history-div, .history-btn {
+    cursor: pointer;
+    user-select: none;
+}
+
+.landing-wrapper header {
+    height: 5.6rem;
+    /* margin-bottom: 5rem; */
+}
+
+@keyframes blob-breathe{
+    0% {
+        transform: translateY(0) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(5%) scale(1);
+    }
+
+    100% {
+        transform: translateY(0) scale(1.05);
+    }
+}

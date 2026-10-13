@@ -1,0 +1,187 @@
+.foot {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.foot .main-content {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    padding-block: 2.4rem;
+    padding-inline: 6rem;
+}
+
+.foot .main-content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-right: 2rem;
+}
+
+.foot .main-content div span:nth-child(1) {
+    height: 3rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        #7e38ff9e 50%, 
+        transparent 100%
+    ) 1;
+}
+
+.foot .main-content div span:nth-child(2) p {
+    line-height: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: rgb(188, 188, 188);
+}
+
+.foot .main-content div span:nth-child(2) h4 {
+    font-weight: 600
+}
+
+.foot .main-content ul li {
+    list-style: none;
+    line-height: 2rem;
+    color: rgb(207, 207, 207);
+    font-weight: 250;
+}
+
+.foot .main-content ul li:nth-child(1) {
+    line-height: 1.4rem;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        90deg, 
+        #7e38ff9e 0%, 
+        transparent 20%, 
+        transparent 100%
+    ) 1;
+}
+
+.foot .main-content ul li a {
+    all: unset;
+    cursor: pointer;
+    padding-bottom: 0.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.foot .main-content ul li a:hover {
+    color: white;
+    font-size: 16.5px;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        #7e38ff9e 50%, 
+        transparent 100%
+    ) 1;
+    transition: all 0.1s ease-in-out;
+}
+
+.foot .main-content div h3 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.foot .main-content div h3 img {
+    height: 30px;
+    width: 30px;
+}
+
+.foot .side-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border-top: 1px solid;
+    border-image: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        #7e38ff9e 50%, 
+        transparent 100%
+    ) 1;
+    padding: 2rem 8rem;
+    color: rgba(206, 206, 206, 0.767);
+    font-weight: 400;
+}
+
+.foot .side-content div span {
+    padding-right: 1.5rem;
+}
+
+.foot .main-content {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    padding-block: 2.4rem;
+    padding-inline: clamp(1.5rem, 1rem + 5vw, 6rem);
+}
+
+.foot .side-content {
+    padding: clamp(1.5rem, 1rem + 3vw, 2rem) clamp(1.5rem, 1rem + 5vw, 8rem);
+}
+
+.subscribe-form {
+    min-width: 0;
+    width: 100%;
+}
+
+.subscribe-form > div {
+    all: unset;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 30px;
+    position: relative;
+}
+
+.subscribe-form input {
+    box-sizing: border-box;
+    all: unset;
+    border: 1px solid #7e38ff5f;
+    padding: 1rem;
+    padding-right: 96px;
+    border-radius: 30px;
+    width: 100%;
+    min-width: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.subscribe-form input:hover, .subscribe-form input:focus {
+    border: 1px solid #7e38ff9e;
+    box-shadow: 0px 1px 40px #260e4d;
+}
+
+.subscribe-form button {
+    all: unset;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    width: 88px;
+    text-align: center;
+    background: linear-gradient(
+    to bottom,
+    #7e38ff 0%,
+    #240058 100%
+    );
+    padding: 0.85rem 0.5rem;
+    border-radius: 30px;
+    position: absolute;
+    right: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.subscribe-form button:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 40px #3d1d71;
+}
