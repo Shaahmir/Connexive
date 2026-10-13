@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve">
+  <defs>
+    <!-- Outer background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#300e6a"/>
+      <stop offset="100%" stop-color="#140031"/>
+    </linearGradient>
+
+    <!-- Inner path gradient -->
+    <linearGradient id="a" x1="255.5" x2="255.5" y1="511" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgb(148, 108, 250)" offset="0.0938"/>
+      <stop stop-color="#a45fff" offset="0.406"/>
+      <stop stop-color="#ccafff" offset="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle/background -->
+  <circle r="256" cx="256" cy="256" fill="url(#bgGrad)" shape="circle"></circle>
+
+  <!-- Inner paths with new gradient -->
+  <g transform="matrix(0.7,0,0,0.7,76.98296533226969,76.79550247192384)">
+    <path fill="url(#a)" d="M392.11 258.13c0-49.27-6.82-84.93-6.72-84.94 5.87-3 12.15-6.26 18.91-9.66 24.73-12.44 42.27-20.11 55.06-24.85 21-7.45 41.63 9.69 47.07 39.94 3.09 18.44 6.21 44 6.18 79.28s-3.41 60.85-6.59 79.31c-5.6 30.27-26.25 47.59-47.21 40.37C446.06 373 428.6 365.49 404 353.3c-6.77-3.34-13.06-6.51-18.93-9.51a521.38 521.38 0 0 0 7.04-85.66zM357.73 256c0 38.11-2.3 66-4.89 86.31-4.53 33.77-32.12 61.31-64.16 64.66-19.43 2.07-68.87 3.37-105.13 2.47-36.26-.69-85.85-4.13-105.47-7-32.37-4.73-63.1-32.09-69.8-64.25C4.41 318.8.66 292.27.61 256s3.8-62.8 7.67-82.22c6.7-32.16 37.43-59.52 69.79-64.25 19.63-2.84 69.22-6.28 105.48-7 36.26-.9 85.7.4 105.13 2.47 32 3.35 59.63 30.89 64.16 64.67 2.59 20.33 4.87 48.22 4.89 86.33z" opacity="1"></path>
+  </g>
+</svg>
